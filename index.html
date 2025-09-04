@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu Uygulaması</title>
+    <link rel="stylesheet" href="havadurumu.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div class="ui">
+        <h2>Hava Durumu</h2>
+        <input type="text" id="cityInput" placeholder="Şehir girin" oninput="showSuggestions(this.value)">
+        <div id="suggestions"></div>
+        <div>
+            <button onclick="getWeatherByCity()">Şehirle Getir</button>
+            <button onclick="getWeatherByGeolocation()">Konumla Getir</button>
+        </div>
+        <div id="favorites"></div>
+    </div>
+
+    <div class="info" id="result"></div>
+
+    <div class="footer">
+        © 2025 by | Orahmetsevik
+    </div>
+
+    <div class="contact-btn" onclick="window.location.href='mailto:sevikoguzrahmet@gmail.com'">
+        Tıkla Ulaş
+    </div>
+
+    <script src="havadurumu.js"></script>
+</body>
+</html>
