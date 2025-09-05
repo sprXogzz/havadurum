@@ -1,0 +1,238 @@
+
+html, body {
+    margin:0; padding:0; height:100%; overflow:hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#000;
+    color:#fff;
+}
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+}
+
+
+.ui {
+    position:absolute;
+    top:20px; left:50%;
+    transform:translateX(-50%);
+    z-index:2;
+    text-align:center;
+    background: rgba(0,0,0,0.5);
+    padding:25px 20px;
+    border-radius:15px;
+    width:90%;
+    max-width:480px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+    transition: all 0.3s ease;
+}
+
+
+.ui h2 {
+    margin:0 0 15px 0;
+    font-size:24px;
+    letter-spacing:1px;
+    color:#ffd700;
+    text-shadow: 0 0 5px #fff;
+}
+
+
+.ui input {
+    padding:12px 15px;
+    border-radius:8px;
+    border:none;
+    margin:5px 0;
+    width:100%;
+    box-sizing:border-box;
+    font-size:16px;
+    outline:none;
+    transition: all 0.2s ease;
+}
+.ui input:focus {
+    box-shadow: 0 0 10px #ffd700;
+    background: rgba(255,255,255,0.1);
+}
+
+
+.ui button {
+    padding:10px 18px;
+    margin:5px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    color:#000;
+    font-size:14px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+.ui button:hover {
+    transform:scale(1.05);
+    box-shadow:0 8px 20px rgba(0,0,0,0.6);
+}
+
+
+#suggestions {
+    position:absolute;
+    background:#111;
+    color:#fff;
+    max-height:150px;
+    overflow-y:auto;
+    width:70%;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:8px;
+    z-index:3;
+    box-shadow:0 4px 15px rgba(0,0,0,0.5);
+}
+#suggestions div {
+    padding:8px 10px;
+    cursor:pointer;
+    transition: all 0.2s ease;
+}
+#suggestions div:hover {
+    background: linear-gradient(90deg,#ffd700,#ff6347);
+    color:#000;
+    transform: scale(1.02);
+}
+
+
+#favorites {
+    margin-top:10px;
+    display:flex;
+    flex-wrap: wrap;
+}
+#favorites button {
+    margin:3px 2px;
+    padding:6px 12px;
+    border:none;
+    border-radius:8px;
+    background: linear-gradient(135deg,#00f,#0ff);
+    color:#fff;
+    font-size:13px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    position:relative;
+}
+#favorites button span {
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    background:#ff5252;
+    border-radius:50%;
+    width:16px;
+    height:16px;
+    font-size:12px;
+    line-height:16px;
+    text-align:center;
+    cursor:pointer;
+    color:#fff;
+}
+#favorites button:hover {
+    transform: scale(1.1);
+    box-shadow:0 4px 12px rgba(0,0,0,0.6);
+}
+
+
+.info {
+    margin-top:15px;
+    background: rgba(255,255,255,0.05);
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 6px 15px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+}
+.info h2 { margin-bottom:10px; font-size:22px; }
+.info div { font-size:70px; margin-bottom:10px; }
+
+
+.footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgba(0,0,0,0.3);
+    padding: 5px 15px;
+    border-radius: 12px;
+    z-index: 5;
+    text-align: center;
+    max-width: 90%;
+    word-wrap: break-word;
+    transition: all 0.3s ease;
+    cursor: default;
+    border: 4px solid;
+    border-image-slice: 1;
+    border-image-source: conic-gradient(
+        from 0deg, red, orange, yellow, green, cyan, blue, violet, red
+    );
+    animation: rotateBorder 3s linear infinite;
+}
+.footer:hover {
+    background: rgba(255,255,255,0.2);
+    color: #ffeb3b;
+    transform: translateX(-50%) scale(1.05);
+}
+@keyframes rotateBorder {
+    0% { border-image-source: conic-gradient(from 0deg, red, orange, yellow, green, cyan, blue, violet, red); }
+    100% { border-image-source: conic-gradient(from 360deg, red, orange, yellow, green, cyan, blue, violet, red); }
+}
+
+/* mail b. */
+.contact-btn {
+    position: fixed;
+    bottom: 20px;  
+    right: 20px;   
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    color: #fff;
+    background: #111;
+    border: 3px solid;
+    border-image-slice: 1;
+    border-image-source: conic-gradient(red, orange, yellow, green, cyan, blue, violet, red);
+    animation: rotateBtnBorder 3s linear infinite;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.contact-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.05);
+}
+@keyframes rotateBtnBorder {
+    0% { border-image-source: conic-gradient(from 0deg, red, orange, yellow, green, cyan, blue, violet, red); }
+    100% { border-image-source: conic-gradient(from 360deg, red, orange, yellow, green, cyan, blue, violet, red); }
+}
+
+/* uyumlulk */
+@media(max-width:600px){
+    .ui { top:10px; padding:15px; width:95%; }
+    .ui input { padding:10px; font-size:14px; }
+    .ui button { padding:8px 12px; font-size:13px; margin:3px; }
+    .info { top:180px; font-size: smaller; }
+    #suggestions { width:90%; left:5%; transform:none; max-height:120px; }
+    #favorites {
+        display:flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin-top:5px;
+    }
+    #favorites button { flex:0 0 auto; margin-right:5px; padding:5px 10px; font-size:12px; }
+    .info div { font-size:50px; }
+    .footer { font-size:12px; padding:4px 10px; }
+    .contact-btn { padding:10px 14px; bottom:15px; right:15px; font-size:13px; }
+}
