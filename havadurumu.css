@@ -138,19 +138,23 @@ canvas {
 }
 
 
-.info {
-    margin-top:15px;
+   .info {
+    margin-top: 15px;
     background: rgba(255,255,255,0.05);
-    padding:15px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0 6px 15px rgba(0,0,0,0.5);
-    position: absolute;
-    top: 220px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
+    padding: 15px;
+    border-radius: 12px;
     text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    position: relative; /* absolute değil artık */
+    z-index: 2;
+    max-width: 300px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 270px; /* masaüstüde biraz aşağıda başlar */
+    transition: margin-top 0.3s ease;
+}
+
 }
 .info h2 { margin-bottom:10px; font-size:22px; }
 .info div { font-size:70px; margin-bottom:10px; }
@@ -233,6 +237,12 @@ canvas {
     }
     #favorites button { flex:0 0 auto; margin-right:5px; padding:5px 10px; font-size:12px; }
     .info div { font-size:50px; }
+    .info {
+    margin-top: 320px; 
+    font-size: smaller;
+}
+
     .footer { font-size:12px; padding:4px 10px; }
     .contact-btn { padding:10px 14px; bottom:15px; right:15px; font-size:13px; }
 }
+
