@@ -6,7 +6,8 @@ html, body {
     color:#fff;
 }
 canvas {
-    position: absolute;
+    position: absolute;margin-top: 270px;
+
     top: 0;
     left: 0;
     width: 100%;
@@ -151,7 +152,7 @@ canvas {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 270px; /* masaüstüde biraz aşağıda başlar */
+    margin-top: 320px; /* masaüstüde biraz aşağıda başlar */
     transition: margin-top 0.3s ease;
 }
 
@@ -245,4 +246,5 @@ canvas {
     .footer { font-size:12px; padding:4px 10px; }
     .contact-btn { padding:10px 14px; bottom:15px; right:15px; font-size:13px; }
 }
+
 
