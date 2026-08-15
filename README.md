@@ -1,4 +1,4 @@
-<img width="1040" height="696" alt="image" src="https://github.com/user-attachments/assets/ad613c4f-c82e-42e0-8694-aa17341ac968" />#  Atmosfer - Anlık & Detaylı Hava Durumu Web Uygulaması
+#  Atmosfer - Anlık & Detaylı Hava Durumu Web Uygulaması
 
 Modern, hızlı ve kullanıcı dostu bir arayüze sahip; anlık hava durumu verilerini, 5 günlük tahminleri ve animasyonlu görsel efektleri bir arada sunan **Progressive Web App (PWA)** destekli hava durumu uygulaması.
 
@@ -6,7 +6,7 @@ Modern, hızlı ve kullanıcı dostu bir arayüze sahip; anlık hava durumu veri
 
 ##  Ekran Görüntüsü
 
-![<img width="1040" height="696" alt="image" src="https://github.com/user-attachments/assets/3d2e6be0-acef-4d25-9522-beb0778bbb23" />](ogiportyeni.png)
+<img width="1040" height="696" alt="image" src="https://github.com/user-attachments/assets/ad613c4f-c82e-42e0-8694-aa17341ac968" />
 
 
 ---
