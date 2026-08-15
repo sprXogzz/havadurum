@@ -1,4 +1,4 @@
-// Variable Naming: Turkish & Meaningful Variable Names
+
 const havaHaritasi = {
     0: { simge: "", tur: "sunny", renk: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)" },
     1: { simge: "", tur: "sunny", renk: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)" },
@@ -142,7 +142,7 @@ async function havaDurumuGetir(enlem, boylam, sehirAdi = "Mevcut Konum") {
     const kart = document.getElementById('weatherCard');
     
     try {
-        // Gelişmiş Metrikler ve 5 Günlük Tahmin API Çağrısı
+        
         const url = `https://api.open-meteo.com/v1/forecast?latitude=${enlem}&longitude=${boylam}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,surface_pressure,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,uv_index_max&timezone=auto`;
         
         const yanıt = await fetch(url);
