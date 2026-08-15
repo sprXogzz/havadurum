@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    
+    <!-- Sayfa Başlığı ve Meta Açıklaması (SEO) -->
+    <title>Hava Durumu - Anlık Hava Durumu Tahmini</title>
+    <meta name="description" content="Anlık, doğru ve detaylı hava durumu tahminleri. Şehir ara veya konumunu kullanarak hava durumunu hemen öğren.">
+    <meta name="keywords" content="hava durumu, anlık hava durumu, sıcaklık, rüzgar hızı, hava tahmini">
+    <meta name="author" content="Orahmetsevik">
+
+    <!-- Favicon Entegrasyonu -->
+    <link rel="icon" type="image/png" href="ogiportyeni.png">
+    <link rel="apple-touch-icon" href="ogiportyeni.png">
+
+    <!-- Social Share (Open Graph / WhatsApp / Twitter) -->
+    <meta property="og:title" content="Hava Durumu Uygulaması">
+    <meta property="og:description" content="Anlık ve doğru hava durumu bilgilerini hızlıca öğrenin.">
+    <meta property="og:image" content="ogiportyeni.png">
+    <meta property="og:url" content="https://sprxogzz.github.io/havadurum/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hava Durumu Uygulaması">
+    <meta name="twitter:description" content="Anlık ve doğru hava durumu bilgilerini hızlıca öğrenin.">
+    <meta name="twitter:image" content="ogiportyeni.png">
+
+    <!-- Fonts ve CSS -->
+    <link rel="stylesheet" href="havadurumu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="weatherCanvas"></canvas>
+
+    <div class="app-container">
+        <header class="search-section">
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Şehir ara..." autocomplete="off">
+                <div id="searchLoader" class="loader hidden"></div>
+                <div id="suggestions" class="suggestions-box hidden"></div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="btnGeo" class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Konumum
+                </button>
+            </div>
+        </header>
+
+        <section id="favoritesSection" class="favorites-container"></section>
+
+        <main id="weatherCard" class="weather-card">
+            <div class="card-placeholder">Bir şehir arayın veya konumunuzu kullanın.</div>
+        </main>
+    </div>
+
+<footer class="footer">
+        <span>© 2025 Orahmetsevik</span>
+        <span>•</span>
+        <a href="mailto:sevikoguzrahmet@gmail.com" class="contact-link">İletişim</a>
+</footer>
+
+    <script src="havadurumu.js"></script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then(kayit => console.log('Service Worker kayıt başarılı:', kayit.scope))
+        .catch(hata => console.error('Service Worker hatası:', hata));
+    });
+  }
+</script>
+</body>
+</html>
